@@ -45,13 +45,23 @@ fun intTypes(){
 }
 
 
-// unsigned integers have same properties as signed integers but not has sign so the 1 bit hold for sign also included in range 
+// Unsigned integers have similar properties to signed integers, but they do not reserve a bit for the sign (positive/negative).
+// This means that the range of unsigned integers includes only non-negative numbers, 
+// and the "sign bit" in a signed integer is used to extend the positive range in unsigned integers.
+// To explicitly define an unsigned integer in Kotlin, we need to use .toUByte(), .toUShort(), .toUInt(), or .toULong() to convert 
+// regular integers to their unsigned counterparts.
 fun unsignedIntFun(){
-    val uByteVar:UByte = 32 //size = 1byte, range (0 to 2^8 - 1) since there are no negative (1 1 1 1 1 1 1 1 = 255) 
-    val uShortVar:UShort = 324 //size=2byte, range(0 to 2^16 -1)..........
-    val uIntVar:UInt=32432 //size = 4byte, range (0 to 2^32 -1 ).........
-    val uLongVar: ULong = 324234 // size = 8byte, range(0 to 2^64 -1)......
+    val uByteVar:UByte = 32.toUByte() //size = 1byte, range (0 to 2^8 - 1) since there are no negative (1 1 1 1 1 1 1 1 = 255) 
+    val uShortVar:UShort = 324.toUShort() //size=2byte, range(0 to 2^16 -1)..........
+    val uIntVar:UInt=32432.toUInt() //size = 4byte, range (0 to 2^32 -1 ).........
+    val uLongVar: ULong = 324234.toULong() // size = 8byte, range(0 to 2^64 -1)......
+
+    println(uByteVar)
+    println(uShortVar)
+    println(uIntVar)
+    println(uLongVar)
 }
+
 
 fun main(){
     // variablesWithType()
