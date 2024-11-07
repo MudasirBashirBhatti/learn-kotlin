@@ -63,9 +63,25 @@ fun unsignedIntFun(){
 }
 
 
+//floating point numbers types
+fun floatingNumFun(){
+    // 1. a float takes 4 bytes (32bits) in memory. 1bit for sign 8bits for exponent and 23bits for fractional part. it gives us 7digits precian since in binary 23bits nearly equal to seven digits. if we reduce exponent bits the fractional bits increases means greater precion.
+    //2. we need to add "f" with floating point number because kotlin treat bydefault as double
+    val floatVar:Float=3.324f
+    println(floatVar)
+
+    // ..........................
+
+    // 1. a double takes (8bites) in memory. 1bit for sign 11bits for exponent and remaining 52bits for fractional part.precion is about 15 to 16decimals
+    val doubleVar:Double=3.2342434
+    println(doubleVar)
+}
+
+
 fun main(){
     // variablesWithType()
     // variablesWithoutType()
     // inTypes()
-    unsignedIntFun()
+    // unsignedIntFun()
+    floatingNumFun()
 }
