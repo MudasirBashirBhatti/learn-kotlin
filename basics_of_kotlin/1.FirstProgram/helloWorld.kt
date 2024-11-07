@@ -1,5 +1,5 @@
 fun main(){
-    println("Hello world!!!")
+    println("Hellos world!!!")
 }
 
 // "fun" is function definition
