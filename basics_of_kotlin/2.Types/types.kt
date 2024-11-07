@@ -41,11 +41,21 @@ fun intTypes(){
     val byteVar:Byte = 32  //size = 1 byte, range (-2^7 to 2^7 - 1), 1 bit is for sign remain space for 7 bits as 1byte = 8bits
     val shortVar:Short = 2343 //size = 2byte, range (-2^15 to 2^15 - 1), 8*2 total 16bits 1 for sign remaining 15bits
     val intVar:Int = 23423424 // size = 4byte, range(-2^31 to 2^31 - 1) 8*4 total bits 32 1 for sign remaining 31bits
-    val double:Double = 234234324354 // size = 8byte, range(-2^63 to 2^63 - 1) 8*8 total bits 64 1 for sign remaining 63bits
+    val LongVar:Long = 234234324354 // size = 8byte, range(-2^63 to 2^63 - 1) 8*8 total bits 64 1 for sign remaining 63bits
+}
+
+
+// unsigned integers have same properties as signed integers but not has sign so the 1 bit hold for sign also included in range 
+fun unsignedIntFun(){
+    val uByteVar:UByte = 32 //size = 1byte, range (0 to 2^8 - 1) since there are no negative (1 1 1 1 1 1 1 1 = 255) 
+    val uShortVar:UShort = 324 //size=2byte, range(0 to 2^16 -1)..........
+    val uIntVar:UInt=32432 //size = 4byte, range (0 to 2^32 -1 ).........
+    val uLongVar: ULong = 324234 // size = 8byte, range(0 to 2^64 -1)......
 }
 
 fun main(){
     // variablesWithType()
     // variablesWithoutType()
-    inTypes()
+    // inTypes()
+    unsignedIntFun()
 }
